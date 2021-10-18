@@ -1,8 +1,8 @@
 //-----------------------------------------------------------------------------
-// CachedAccessTokenProvider_UnitTests.cs
+//Â CachedAccessTokenProvider_UnitTests.cs
 //
-// Xbox Advanced Technology Group (ATG)
-// Copyright (C) Microsoft Corporation. All rights reserved.
+//Â Xbox AdvancedÂ TechnologyÂ GroupÂ (ATG)
+//Â CopyrightÂ (C)Â MicrosoftÂ Corporation.Â AllÂ rightsÂ reserved.
 //-----------------------------------------------------------------------------
 
 using Microsoft.StoreServices;
@@ -25,10 +25,7 @@ namespace StoreServices_UnitTests
             var tokenResponse = new AccessToken
             {
                 Audience = AccessTokenAudienceTypes.Service,
-                EpochValidAfter = (uint)DateTimeOffset.Now.ToUnixTimeSeconds(),
-                EpochExpiresOn = (uint)DateTimeOffset.Now.ToUnixTimeSeconds() + 240,
                 ExpiresIn = 240,
-                ExtExpiredIn = 240,
                 Token = "TestExpiringServiceTokenIn4Minutes"
             };
             result.Content = new StringContent(JsonConvert.SerializeObject(tokenResponse));
@@ -48,10 +45,7 @@ namespace StoreServices_UnitTests
             var tokenResponse = new AccessToken
             {
                 Audience = AccessTokenAudienceTypes.Service,
-                EpochValidAfter = (uint)DateTimeOffset.Now.ToUnixTimeSeconds(),
-                EpochExpiresOn = (uint)DateTimeOffset.Now.ToUnixTimeSeconds() + 14400,
                 ExpiresIn = 14400,
-                ExtExpiredIn = 14400,
                 Token = "TestServiceToken"
             };
 
@@ -72,10 +66,7 @@ namespace StoreServices_UnitTests
             var tokenResponse = new AccessToken
             {
                 Audience = AccessTokenAudienceTypes.Service,
-                EpochValidAfter = (uint)DateTimeOffset.Now.ToUnixTimeSeconds(),
-                EpochExpiresOn = (uint)DateTimeOffset.Now.ToUnixTimeSeconds() + 14400,
                 ExpiresIn = 14400,
-                ExtExpiredIn = 14400,
                 Token = "TestCollectionsToken"
             };
 
@@ -96,10 +87,7 @@ namespace StoreServices_UnitTests
             var tokenResponse = new AccessToken
             {
                 Audience = AccessTokenAudienceTypes.Service,
-                EpochValidAfter = (uint)DateTimeOffset.Now.ToUnixTimeSeconds(),
-                EpochExpiresOn = (uint)DateTimeOffset.Now.ToUnixTimeSeconds() + 14400,
                 ExpiresIn = 14400,
-                ExtExpiredIn = 14400,
                 Token = "TestCollectionsToken"
             };
 
