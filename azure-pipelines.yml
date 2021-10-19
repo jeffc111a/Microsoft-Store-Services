@@ -34,5 +34,5 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: 'Microsoft.StoreServices\Microsoft.StoreServices\bin\Release\Microsoft.StoreServices.1.21.9.nupkg'
     ArtifactName: 'drop'
